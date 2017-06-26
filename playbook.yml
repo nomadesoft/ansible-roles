@@ -1,0 +1,6 @@
+---
+- name: Configure dev-environment
+  hosts: all
+  roles:
+    - common
+    - docker
