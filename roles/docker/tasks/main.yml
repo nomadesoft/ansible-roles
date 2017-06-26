@@ -1,0 +1,22 @@
+---
+# tasks file for docker
+- name: Add Docker offical GPG key
+  shell: "curl -sSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -"
+
+- name: Add docker repository
+  become: true
+  apt_repository:
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
+    mode: '644'
+    update_cache: yes
+    state: present
+
+- name: Install docker-ce
+  become: true
+  apt:
+    name=docker-ce
+    state=present
+
+- name: Post Install Docker
+  become: true
+  shell: groupadd docker || usermod -aG docker $USER
