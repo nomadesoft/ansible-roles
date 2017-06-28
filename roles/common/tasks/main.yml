@@ -4,12 +4,8 @@
   become: true
   apt: update_cache=yes
 
-- name: Apt Upgrade
-  become: true
-  apt:
-    upgrade: dist
-
 - name: Install libraries with apt
+  become: true
   apt: name={{ item }} state=present
   with_items:
     - wget
