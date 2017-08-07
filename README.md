@@ -2,7 +2,7 @@
 
 This is a basic example of ansible for provisioning your dev environment.
 
-## Requirments
+## Requirements
 
 Ansible >= 2.3
 
