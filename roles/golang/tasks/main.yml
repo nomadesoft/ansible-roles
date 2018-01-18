@@ -1,0 +1,37 @@
+---
+# tasks file for golang
+
+- name: Download go tarball
+  get_url:
+    url: "{{ go_tarball_url }}"
+    dest: "/tmp/{{ go_tarball }}"
+    checksum: "{{ go_tarball_checksum }}"
+
+- name: Extract the go tarball
+  become: yes
+  unarchive:
+    src: "/tmp/{{ go_tarball }}"
+    dest: "{{ go_install_dir }}"
+    copy: no
+
+- name: Add Go bin directory to PATH environment
+  become: yes
+  copy:
+    src: go-bin.sh
+    dest: /etc/profile.d
+
+- name: Set GOPATH environment varibles
+  become: yes
+  copy:
+    src: go-path.sh
+    dest: /etc/profile.d
+
+- name: Creates Go workspace directory
+  file:
+    path: "{{ item }}"
+    state: directory
+    recurse: yes
+  with_items:
+    - $HOME/go/bin
+    - $HOME/go/src
+    - $HOME/go/pkg
