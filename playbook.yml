@@ -6,3 +6,5 @@
     - docker
     - nodejs
     - php
+    - golang
+    - kubernetes

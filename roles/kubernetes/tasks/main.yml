@@ -1,0 +1,19 @@
+---
+# tasks file for kubernetes
+- name: Add Kubernetes key
+  shell: "curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -"
+
+- name: Add Kubernetes repository
+  become: true
+  apt_repository:
+    repo: "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+    mode: '644'
+    update_cache: yes
+    state: present
+
+- name: Install Kubernetes
+  become: true
+  apt:
+    name=kubectl
+    state=present
+
