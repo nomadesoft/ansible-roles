@@ -1,0 +1,14 @@
+---
+# tasks file for kvm
+- name: Apt Update
+  become: true
+  apt: update_cache=yes
+
+- name: Install necesary KVM libraries with apt
+  become: true
+  apt: name={{ item }} state=present
+  with_items:
+    - qemu-kvm
+    - libvirt-bin
+    - bridge-utils
+    - virt-manager

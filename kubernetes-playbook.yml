@@ -1,0 +1,5 @@
+---
+- name: Configure Kubernetes dev-environment
+  hosts: all
+  roles:
+    - kubernetes

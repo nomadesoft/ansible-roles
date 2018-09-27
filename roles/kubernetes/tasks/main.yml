@@ -1,0 +1,7 @@
+---
+# tasks file for kubernetes
+
+- include: kvm-setup.yml
+- include: kubectl-setup.yml
+- include: minikube-setup.yml
+

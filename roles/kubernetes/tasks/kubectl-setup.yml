@@ -1,0 +1,25 @@
+---
+# tasks file for kubectl
+
+- name: Add Cloud google apt-key
+  become: true
+  apt_key:
+    url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+    state: present
+
+- name: Add apt kubernetes-xenial
+  become: true
+  apt_repository:
+    repo: deb http://apt.kubernetes.io/ kubernetes-xenial main
+    state: present
+
+- name: Apt Update
+  become: true
+  apt: update_cache=yes
+
+- name: Install necesary kubectl libraries with apt
+  become: true
+  apt: name={{ item }} state=present
+  with_items:
+    - apt-transport-https
+    - kubectl
