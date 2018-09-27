@@ -12,3 +12,17 @@
     - libvirt-bin
     - bridge-utils
     - virt-manager
+
+- name: Install docker-machine-driver-kvm
+  become: true
+  get_url:
+    url: https://github.com/dhiltgen/docker-machine-kvm/releases/download/v0.10.0/docker-machine-driver-kvm-ubuntu16.04
+    dest: /usr/local/bin/docker-machine-driver-kvm
+    mode: 0755
+
+- name: Install docker-machine-driver-kvm2
+  become: true
+  get_url:
+    url: https://storage.googleapis.com/minikube/releases/latest/docker-machine-driver-kvm2
+    dest: /usr/local/bin/docker-machine-driver-kvm2
+    mode: 0755
