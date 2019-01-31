@@ -1,0 +1,8 @@
+---
+# tasks file for php
+- name: Install Defualt Java
+  become: true
+  apt: name={{ item }} state=present
+  with_items:
+    - default-jre
+    - default-jdk
