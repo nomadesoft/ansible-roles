@@ -1,9 +1,9 @@
 ---
 # tasks file for nodejs
 - name: Add NodeJS deb source
-  shell: "curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -"
+  shell: "curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -"
 
-- name: Install NodeJS
+- name: Install NodeJS 10.x
   become: true
   apt:
     name=nodejs

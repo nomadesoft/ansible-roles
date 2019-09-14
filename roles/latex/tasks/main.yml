@@ -1,0 +1,30 @@
+---
+# tasks file for latex
+
+- name: Install texlive packages
+  become: true
+  apt: name={{ item }} state=present
+  with_items:
+    - texlive  
+    - texlive-lang-spanish
+    - texlive-lang-english
+    - texlive-pictures
+    - texlive-fonts-extra
+    - texlive-bibtex-extra
+    - texlive-luatex
+    - texlive-science
+- name: Install latexmk
+  become: true
+  apt:
+    name: latexmk
+    state: present
+- name: Install texmaker
+  become: true
+  apt:
+    name: texmaker
+    state: present
+- name: Install biber
+  become: true
+  apt:
+    name: biber
+    state: present

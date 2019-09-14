@@ -1,0 +1,5 @@
+---
+- name: Configure academic-environment
+  hosts: all
+  roles:
+    - latex  

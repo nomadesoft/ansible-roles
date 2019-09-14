@@ -1,8 +1,9 @@
 ---
 # tasks file for php
-- name: Install Defualt Java
+- name: Install openjdk 11 & 8
   become: true
   apt: name={{ item }} state=present
   with_items:
-    - default-jre
-    - default-jdk
+    - openjdk-11-jdk
+    - openjdk-11-jre
+    - openjdk-8-jdk
