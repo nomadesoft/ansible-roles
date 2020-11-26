@@ -1,0 +1,9 @@
+---
+- name: Configure dev-environment
+  hosts: all
+  roles:
+    - common
+    - docker
+    - golang
+    - java
+    - dev-tools

@@ -1,0 +1,53 @@
+---
+# tasks file for roles/dev-tools
+
+- name: Install Insomnia
+  become: true
+  snap:
+    name: insomnia
+
+- name: Install Insomnia designer
+  become: true
+  snap:
+    name: insomnia-designer
+
+- name: Install Postman
+  become: true
+  snap:
+    name: postman
+
+- name: Install Slack
+  become: true
+  snap:
+    name: slack
+    classic: yes
+
+- name: Install VSCode
+  become: true
+  snap:
+    name: code
+    classic: yes
+
+- name: Install Intellij idea community
+  become: true
+  snap:
+    name: intellij-idea-community
+    classic: yes
+
+- name: Install Universal Database Tool (dbeaver-ce)
+  become: true
+  snap:
+    name: dbeaver-ce
+    classic: yes
+
+- name: Install Kubectl
+  become: true
+  snap:
+    name: kubectl
+    classic: yes
+
+- name: Install Helm
+  become: true
+  snap:
+    name: helm
+    classic: yes

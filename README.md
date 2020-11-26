@@ -8,10 +8,19 @@ Ansible >= 2.3
 
 ## How to use
 
+### Setup a virtualenv (Very recomended)
+Install virtualenv
+
 ```
-$ git clone
-$ cd ansible-dev-environment
-$ ansible-playbook playbook.yml -i hosts -K
+cd ansible-roles
+
+$ virtualenv --python=/usr/bin/python3 env
+$ source env/bin/activate
+$ pip install -r requirements.txt
 ```
 
+### Run the playbook
+```
+$ ansible-playbook playbook.yml -i hosts -K
+```
 That's it.

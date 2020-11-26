@@ -17,6 +17,8 @@
     - ca-certificates
     - software-properties-common
     - zsh
+    - graphviz
+    - snapd
 
 - name: Set zsh default shell
   become: true
@@ -24,3 +26,4 @@
 
 - name: Install Oh My Zsh
   shell: sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+  ignore_errors: yes
