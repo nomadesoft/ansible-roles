@@ -1,12 +1,12 @@
 ---
 # defaults file for golang
 
-go_version: '1.15.6'
+go_version: '1.20.7'
 
 go_tarball: 'go{{ go_version }}.linux-amd64.tar.gz'
 
-go_tarball_url: "https://dl.google.com/go/{{ go_tarball }}"
+go_tarball_url: "https://do.dev/dl/{{ go_tarball }}"
 
-go_tarball_checksum: 'sha256:3918e6cc85e7eaaa6f859f1bdbaac772e7a825b0eb423c63d3ae68b21f84b844'
+go_tarball_checksum: 'sha256:f0a87f1bcae91c4b69f8dc2bc6d7e6bfcd7524fceec130af525058c0c17b1b44'
 
 go_install_dir: '/usr/local/'

@@ -8,4 +8,4 @@ apt_key_sig: 58118E89F3A912897C070ADBF76221572C52609D
 apt_repository: deb https://apt.dockerproject.org/repo {{ ansible_lsb.id|lower }}-{{ ansible_lsb.codename|lower }} main }
 
 # Docker compose version
-docker_compose_version: 1.27.4
+docker_compose_version: v2.20.2
