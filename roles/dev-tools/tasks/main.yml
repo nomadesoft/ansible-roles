@@ -28,12 +28,6 @@
     name: code
     classic: yes
 
-- name: Install Intellij idea community
-  become: true
-  snap:
-    name: intellij-idea-community
-    classic: yes
-
 - name: Install Universal Database Tool (dbeaver-ce)
   become: true
   snap:
@@ -50,4 +44,16 @@
   become: true
   snap:
     name: helm
+    classic: yes
+
+- name: Install visual code
+  become: true
+  snap:
+    name: code
+    classic: yes
+
+- name: Install telegram
+  become: true
+  snap:
+    name: telegram-desktop
     classic: yes

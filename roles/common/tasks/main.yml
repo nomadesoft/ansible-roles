@@ -18,6 +18,7 @@
     - software-properties-common
     - zsh
     - graphviz
+    - make
 
 - name: Set zsh default shell
   become: true
