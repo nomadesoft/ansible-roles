@@ -1,0 +1,5 @@
+---
+- name: Configure dev-environment with java
+  hosts: all
+  roles:
+    - java 

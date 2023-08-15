@@ -1,15 +1,18 @@
 ---
 # tasks file for php
-- name: Install openjdk 11 & 8
+- name: Install openjdk 17, 11 & 8
   become: true
-  apt: name={{ item }} state=present
-  with_items:
-    - openjdk-11-jdk
-    - openjdk-8-jdk
+  apt: 
+    name:
+      - openjdk-17-jdk
+      - openjdk-11-jdk
+      - openjdk-8-jdk
+    state: present
 
 - name: Install gradle and groovy
   become: true
-  apt: name={{ item }} state=present
-  with_items:
-    - gradle
-    - groovy
+  apt: 
+    name:
+      - gradle
+      - groovy
+    state: present

@@ -19,6 +19,7 @@
     - zsh
     - graphviz
     - make
+    - libfuse2
 
 - name: Set zsh default shell
   become: true
