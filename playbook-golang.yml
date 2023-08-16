@@ -1,0 +1,5 @@
+---
+- name: Configure dev-environment with golang
+  hosts: all
+  roles:
+    - golang 
