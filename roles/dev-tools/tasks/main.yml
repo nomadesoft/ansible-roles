@@ -52,8 +52,14 @@
     name: telegram-desktop
     classic: yes
 
-- name: Install telegram
+- name: Install Authy
   become: true
   snap:
     name: authy
     classic: no
+
+- name: Install aws-cli
+  become: true
+  snap:
+    name: aws-cli
+    classic: yes
