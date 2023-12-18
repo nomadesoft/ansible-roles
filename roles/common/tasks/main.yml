@@ -16,6 +16,7 @@
     - apt-transport-https
     - ca-certificates
     - software-properties-common
+    - build-essential
     - zsh
     - graphviz
     - make
