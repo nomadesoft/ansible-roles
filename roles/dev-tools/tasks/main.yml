@@ -6,11 +6,6 @@
   snap:
     name: insomnia
 
-- name: Install Insomnia designer
-  become: true
-  snap:
-    name: insomnia-designer
-
 - name: Install Postman
   become: true
   snap:
@@ -46,16 +41,11 @@
     name: helm
     classic: yes
 
-- name: Install telegram
+- name: Install authenticator
   become: true
   snap:
-    name: telegram-desktop
-    classic: yes
-
-- name: Install Authy
-  become: true
-  snap:
-    name: authy
+    name: authenticator
+    channel: latest/edge
     classic: no
 
 - name: Install aws-cli
